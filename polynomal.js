@@ -1,5 +1,3 @@
-
-
 class Polynomal {
   constructor(nums) {
     this.nums = nums;
@@ -7,12 +5,6 @@ class Polynomal {
     this.drvt = 0;
 
   }
-  // copy(poly) { 
-  //   let xna = [];
-  //   for (let j = 0; j < this.backup.length; j++) {
-  //     this.nums.push(this.backup[j]);
-  //   }
-  // }
   difr() {
     let n = this.nums.slice();
     let a = [];
@@ -44,6 +36,3 @@ let polynml = new Polynomal(arr);
 function npn(a,b) {
   return new ComplexNumber(a,b);
 }
-
-//ax^n
-//n*ax^n-1
