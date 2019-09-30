@@ -11,7 +11,6 @@ class Polynomal {
     n.pop();
     for (let i = 1; n.length > 0; i++) {
       let nx = n.pop();
-      //Get Derivitive
       a.unshift((i*nx));
     }
     return a;
@@ -28,10 +27,6 @@ class Polynomal {
     return a;
   }
 }
-
-let arr = [3,1];
-let polynml = new Polynomal(arr);
-
 
 function npn(a,b) {
   return new ComplexNumber(a,b);
