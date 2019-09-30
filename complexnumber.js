@@ -6,7 +6,7 @@ class ComplexNumber {
   add(num) {
     this.a = this.a+num.a;
     this.b = this.b+num.b;
-    
+
   }
   subtraction(num) {
     this.a = this.a-num.a;
@@ -26,7 +26,7 @@ class ComplexNumber {
     let c = num.a;
     let d = num.b;
     this.a = ((a*c) + (b*d))/((c*c) + (d*d));
-    this.b = ((b*c) - (a*c))/((c*c) + (d*d));
+    this.b = ((b*c) - (a*d))/((c*c) + (d*d));
   }
   powr(x) {
     let a = this.a;
@@ -40,10 +40,23 @@ class ComplexNumber {
     }
     return ncn;
   }
-  mangnatude() {
+  dist(other) {
     let a = this.a;
     let b = this.b;
-    return Math.sqrt((a*a) + (b*b));
+    let c = other.a;
+    let d = other.b;
+    let a1 = 0;
+    let b1 = 0;
+    if (a > c) {
+      a1 = a-c;
+    } else {
+      a1 = c-a;
+    }
+    if (b > d) {
+      b1 = b-d;
+    } else {
+      b1 = d-b;
+    }
+    return Math.sqrt((a1*a1)+(b1*b1))
   }
 }
-
